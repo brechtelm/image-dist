@@ -1,0 +1,7 @@
+FROM arm32v7/ubuntu
+COPY /usr/bin/qemu-arm-static /usr/local/bin/qemu-arm-static
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get install -y screenfetch
+ENTRYPOINT ["/usr/bin/screenfetch"]
+
